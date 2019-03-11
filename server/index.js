@@ -3,7 +3,7 @@ const express = require('express'),
       bodyParser = require('body-parser'),
       cors = require('cors'),
       {getWeather, faveCity} = require (`${__dirname}/controllers/weather-controller`),
-      port = 3001
+      port = process.env.PORT || 3001 
 
       
  app.use(bodyParser.json());
